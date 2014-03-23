@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		638AAFDB46E04F4C827E080C /* libPods-CCLHTTPServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AAEFE7CF1145EBBD814114 /* libPods-CCLHTTPServer.a */; };
+		77DF065318DF6BCE00B52D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DF065218DF6BCE00B52D94 /* Foundation.framework */; };
+		77DF065618DF6BCE00B52D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF065518DF6BCE00B52D94 /* main.m */; };
+		77DF066618DF6C0A00B52D94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DF066518DF6C0A00B52D94 /* XCTest.framework */; };
+		77DF066C18DF6C0A00B52D94 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77DF066A18DF6C0A00B52D94 /* InfoPlist.strings */; };
+		77DF066E18DF6C0A00B52D94 /* CCLHTTPServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF066D18DF6C0A00B52D94 /* CCLHTTPServerTests.m */; };
+		A7367264AE714138AC70CC2D /* libPods-CCLHTTPServerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CCC114B9384E4A93E28B3B /* libPods-CCLHTTPServerTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77DF067018DF6C0A00B52D94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77DF064718DF6BCE00B52D94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77DF064E18DF6BCE00B52D94;
+			remoteInfo = CCLHTTPServer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		77DF064D18DF6BCE00B52D94 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		12AAEFE7CF1145EBBD814114 /* libPods-CCLHTTPServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCLHTTPServer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CCC114B9384E4A93E28B3B /* libPods-CCLHTTPServerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCLHTTPServerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		265A95FCB7CC4846966AA239 /* Pods-CCLHTTPServerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLHTTPServerTests.xcconfig"; path = "Pods/Pods-CCLHTTPServerTests.xcconfig"; sourceTree = "<group>"; };
+		41A97A224B2649E3BAB3E044 /* Pods-CCLHTTPServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLHTTPServer.xcconfig"; path = "Pods/Pods-CCLHTTPServer.xcconfig"; sourceTree = "<group>"; };
+		77DF064F18DF6BCE00B52D94 /* CCLHTTPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CCLHTTPServer; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DF065218DF6BCE00B52D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77DF065518DF6BCE00B52D94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77DF065818DF6BCE00B52D94 /* CCLHTTPServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLHTTPServer-Prefix.pch"; sourceTree = "<group>"; };
+		77DF066418DF6C0A00B52D94 /* CCLHTTPServerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CCLHTTPServerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77DF066518DF6C0A00B52D94 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		77DF066918DF6C0A00B52D94 /* CCLHTTPServerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CCLHTTPServerTests-Info.plist"; sourceTree = "<group>"; };
+		77DF066B18DF6C0A00B52D94 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		77DF066D18DF6C0A00B52D94 /* CCLHTTPServerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCLHTTPServerTests.m; sourceTree = "<group>"; };
+		77DF066F18DF6C0A00B52D94 /* CCLHTTPServerTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CCLHTTPServerTests-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77DF064C18DF6BCE00B52D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF065318DF6BCE00B52D94 /* Foundation.framework in Frameworks */,
+				638AAFDB46E04F4C827E080C /* libPods-CCLHTTPServer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DF066118DF6C0A00B52D94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF066618DF6C0A00B52D94 /* XCTest.framework in Frameworks */,
+				A7367264AE714138AC70CC2D /* libPods-CCLHTTPServerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77DF064618DF6BCE00B52D94 = {
+			isa = PBXGroup;
+			children = (
+				77DF065418DF6BCE00B52D94 /* CCLHTTPServer */,
+				77DF066718DF6C0A00B52D94 /* CCLHTTPServerTests */,
+				77DF065118DF6BCE00B52D94 /* Frameworks */,
+				77DF065018DF6BCE00B52D94 /* Products */,
+				41A97A224B2649E3BAB3E044 /* Pods-CCLHTTPServer.xcconfig */,
+				265A95FCB7CC4846966AA239 /* Pods-CCLHTTPServerTests.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		77DF065018DF6BCE00B52D94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77DF064F18DF6BCE00B52D94 /* CCLHTTPServer */,
+				77DF066418DF6C0A00B52D94 /* CCLHTTPServerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77DF065118DF6BCE00B52D94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77DF065218DF6BCE00B52D94 /* Foundation.framework */,
+				77DF066518DF6C0A00B52D94 /* XCTest.framework */,
+				12AAEFE7CF1145EBBD814114 /* libPods-CCLHTTPServer.a */,
+				16CCC114B9384E4A93E28B3B /* libPods-CCLHTTPServerTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77DF065418DF6BCE00B52D94 /* CCLHTTPServer */ = {
+			isa = PBXGroup;
+			children = (
+				77DF065518DF6BCE00B52D94 /* main.m */,
+				77DF065718DF6BCE00B52D94 /* Supporting Files */,
+			);
+			path = CCLHTTPServer;
+			sourceTree = "<group>";
+		};
+		77DF065718DF6BCE00B52D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77DF065818DF6BCE00B52D94 /* CCLHTTPServer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77DF066718DF6C0A00B52D94 /* CCLHTTPServerTests */ = {
+			isa = PBXGroup;
+			children = (
+				77DF066D18DF6C0A00B52D94 /* CCLHTTPServerTests.m */,
+				77DF066818DF6C0A00B52D94 /* Supporting Files */,
+			);
+			path = CCLHTTPServerTests;
+			sourceTree = "<group>";
+		};
+		77DF066818DF6C0A00B52D94 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77DF066918DF6C0A00B52D94 /* CCLHTTPServerTests-Info.plist */,
+				77DF066A18DF6C0A00B52D94 /* InfoPlist.strings */,
+				77DF066F18DF6C0A00B52D94 /* CCLHTTPServerTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77DF064E18DF6BCE00B52D94 /* CCLHTTPServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DF065D18DF6BCE00B52D94 /* Build configuration list for PBXNativeTarget "CCLHTTPServer" */;
+			buildPhases = (
+				915FCB47973447009199392B /* Check Pods Manifest.lock */,
+				77DF064B18DF6BCE00B52D94 /* Sources */,
+				77DF064C18DF6BCE00B52D94 /* Frameworks */,
+				77DF064D18DF6BCE00B52D94 /* CopyFiles */,
+				A2F6347AAC954C2994CCFCDE /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CCLHTTPServer;
+			productName = CCLHTTPServer;
+			productReference = 77DF064F18DF6BCE00B52D94 /* CCLHTTPServer */;
+			productType = "com.apple.product-type.tool";
+		};
+		77DF066318DF6C0A00B52D94 /* CCLHTTPServerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77DF067418DF6C0A00B52D94 /* Build configuration list for PBXNativeTarget "CCLHTTPServerTests" */;
+			buildPhases = (
+				E2795ECCBF804EF0925F9A1C /* Check Pods Manifest.lock */,
+				77DF066018DF6C0A00B52D94 /* Sources */,
+				77DF066118DF6C0A00B52D94 /* Frameworks */,
+				77DF066218DF6C0A00B52D94 /* Resources */,
+				0C272898FA8249E3BE3257B9 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77DF067118DF6C0A00B52D94 /* PBXTargetDependency */,
+			);
+			name = CCLHTTPServerTests;
+			productName = CCLHTTPServerTests;
+			productReference = 77DF066418DF6C0A00B52D94 /* CCLHTTPServerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77DF064718DF6BCE00B52D94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Cocode;
+				TargetAttributes = {
+					77DF066318DF6C0A00B52D94 = {
+						TestTargetID = 77DF064E18DF6BCE00B52D94;
+					};
+				};
+			};
+			buildConfigurationList = 77DF064A18DF6BCE00B52D94 /* Build configuration list for PBXProject "CCLHTTPServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77DF064618DF6BCE00B52D94;
+			productRefGroup = 77DF065018DF6BCE00B52D94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77DF064E18DF6BCE00B52D94 /* CCLHTTPServer */,
+				77DF066318DF6C0A00B52D94 /* CCLHTTPServerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77DF066218DF6C0A00B52D94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF066C18DF6C0A00B52D94 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C272898FA8249E3BE3257B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CCLHTTPServerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		915FCB47973447009199392B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F6347AAC954C2994CCFCDE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-CCLHTTPServer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2795ECCBF804EF0925F9A1C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77DF064B18DF6BCE00B52D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF065618DF6BCE00B52D94 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77DF066018DF6C0A00B52D94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77DF066E18DF6C0A00B52D94 /* CCLHTTPServerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77DF067118DF6C0A00B52D94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77DF064E18DF6BCE00B52D94 /* CCLHTTPServer */;
+			targetProxy = 77DF067018DF6C0A00B52D94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77DF066A18DF6C0A00B52D94 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77DF066B18DF6C0A00B52D94 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77DF065B18DF6BCE00B52D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		77DF065C18DF6BCE00B52D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		77DF065E18DF6BCE00B52D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A97A224B2649E3BAB3E044 /* Pods-CCLHTTPServer.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCLHTTPServer/CCLHTTPServer-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		77DF065F18DF6BCE00B52D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41A97A224B2649E3BAB3E044 /* Pods-CCLHTTPServer.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCLHTTPServer/CCLHTTPServer-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		77DF067218DF6C0A00B52D94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265A95FCB7CC4846966AA239 /* Pods-CCLHTTPServerTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCLHTTPServerTests/CCLHTTPServerTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "CCLHTTPServerTests/CCLHTTPServerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		77DF067318DF6C0A00B52D94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 265A95FCB7CC4846966AA239 /* Pods-CCLHTTPServerTests.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CCLHTTPServerTests/CCLHTTPServerTests-Prefix.pch";
+				INFOPLIST_FILE = "CCLHTTPServerTests/CCLHTTPServerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77DF064A18DF6BCE00B52D94 /* Build configuration list for PBXProject "CCLHTTPServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DF065B18DF6BCE00B52D94 /* Debug */,
+				77DF065C18DF6BCE00B52D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DF065D18DF6BCE00B52D94 /* Build configuration list for PBXNativeTarget "CCLHTTPServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DF065E18DF6BCE00B52D94 /* Debug */,
+				77DF065F18DF6BCE00B52D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77DF067418DF6C0A00B52D94 /* Build configuration list for PBXNativeTarget "CCLHTTPServerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77DF067218DF6C0A00B52D94 /* Debug */,
+				77DF067318DF6C0A00B52D94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77DF064718DF6BCE00B52D94 /* Project object */;
+}
