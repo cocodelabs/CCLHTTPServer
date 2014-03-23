@@ -103,6 +103,10 @@
     return self;
 }
 
+- (void)stop {
+    [self.socket disconnectAfterWriting];
+}
+
 #pragma mark - GCDAsyncSocketDelegate
 
 - (void)socket:(GCDAsyncSocket *)sock didAcceptNewSocket:(GCDAsyncSocket *)newSocket {
