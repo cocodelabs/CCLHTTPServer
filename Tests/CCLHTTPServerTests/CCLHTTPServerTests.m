@@ -29,4 +29,44 @@
     expect(response.statusCode).to.equal(201);
 }
 
+- (void)testEncodesJSONResponse {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse JSONResponseWithStatusCode:200 headers:nil parameters:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/json; charset=utf8");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
+}
+
+- (void)testEncodesJSONResponseDoesntOverideHeaders {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse JSONResponseWithStatusCode:200 headers:@{@"Test": @"Value"} parameters:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/json; charset=utf8");
+    expect([[response headers] objectForKey:@"Test"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
+}
+
+- (void)testEncodesJSONResponseDoesntOverideContentTypeHeader {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse JSONResponseWithStatusCode:200 headers:@{@"Content-Type": @"Value"} parameters:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
+}
+
 @end
