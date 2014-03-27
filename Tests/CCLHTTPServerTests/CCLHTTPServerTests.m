@@ -69,7 +69,6 @@
     expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
 }
 
-
 - (void)testEncodesPropertyListResponse {
     CCLHTTPServerResponse *response = [CCLHTTPServerResponse propertyListResponseWithStatusCode:200 headers:nil plist:@{@"key": @"value"}];
 
@@ -108,6 +107,48 @@
     expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"Value");
     expect(body).notTo.beNil();
     expect(plist).to.equal(@{@"key": @"value"});
+}
+
+#pragma mark - Form URL Encoded
+
+- (void)testEncodesFormURLEncodedResponse {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse formURLEncodedResponseWithStatusCode:200 headers:nil dictionary:@{@"key": @"v@lue"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/x-www-form-urlencoded; charset=utf8");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"key=v%40lue");
+}
+
+- (void)testEncodesFormURLEncodedResponseDoesntOverideHeaders {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse formURLEncodedResponseWithStatusCode:200 headers:@{@"Test": @"Value"} dictionary:@{@"key": @"v@lue"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/x-www-form-urlencoded; charset=utf8");
+    expect([[response headers] objectForKey:@"Test"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"key=v%40lue");
+}
+
+- (void)testEncodesFormURLEncodedResponseDoesntOverideContentTypeHeader {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse formURLEncodedResponseWithStatusCode:200 headers:@{@"Content-Type": @"Value"} dictionary:@{@"key": @"v@lue"}];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"key=v%40lue");
 }
 
 @end
