@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		638AAFDB46E04F4C827E080C /* libPods-CCLHTTPServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12AAEFE7CF1145EBBD814114 /* libPods-CCLHTTPServer.a */; };
+		7754935018E3A99200FAF385 /* CCLHTTPViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7754934F18E3A99200FAF385 /* CCLHTTPViewTests.m */; };
 		77DF065318DF6BCE00B52D94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DF065218DF6BCE00B52D94 /* Foundation.framework */; };
 		77DF065618DF6BCE00B52D94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77DF065518DF6BCE00B52D94 /* main.m */; };
 		77DF066618DF6C0A00B52D94 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DF066518DF6C0A00B52D94 /* XCTest.framework */; };
@@ -43,6 +44,7 @@
 		16CCC114B9384E4A93E28B3B /* libPods-CCLHTTPServerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CCLHTTPServerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		265A95FCB7CC4846966AA239 /* Pods-CCLHTTPServerTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLHTTPServerTests.xcconfig"; path = "Pods/Pods-CCLHTTPServerTests.xcconfig"; sourceTree = "<group>"; };
 		41A97A224B2649E3BAB3E044 /* Pods-CCLHTTPServer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCLHTTPServer.xcconfig"; path = "Pods/Pods-CCLHTTPServer.xcconfig"; sourceTree = "<group>"; };
+		7754934F18E3A99200FAF385 /* CCLHTTPViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLHTTPViewTests.m; sourceTree = "<group>"; };
 		77DF064F18DF6BCE00B52D94 /* CCLHTTPServer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CCLHTTPServer; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DF065218DF6BCE00B52D94 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		77DF065518DF6BCE00B52D94 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		77DF066718DF6C0A00B52D94 /* CCLHTTPServerTests */ = {
 			isa = PBXGroup;
 			children = (
+				7754934F18E3A99200FAF385 /* CCLHTTPViewTests.m */,
 				77DF066D18DF6C0A00B52D94 /* CCLHTTPServerTests.m */,
 				77DF066818DF6C0A00B52D94 /* Supporting Files */,
 			);
@@ -307,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DF066E18DF6C0A00B52D94 /* CCLHTTPServerTests.m in Sources */,
+				7754935018E3A99200FAF385 /* CCLHTTPViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,4 +24,9 @@
     expect(response).to.conformTo(@protocol(CCLHTTPServerResponse));
 }
 
+- (void)testHasStatusCode {
+    CCLHTTPServerResponse *response = [[CCLHTTPServerResponse alloc] initWithStatusCode:201 headers:nil body:nil];
+    expect(response.statusCode).to.equal(201);
+}
+
 @end

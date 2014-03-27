@@ -16,4 +16,8 @@
 
 - (instancetype)initWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers body:(NSData *)body;
 
+#pragma mark - Convinence responses
+
++ (instancetype)responseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers body:(NSData *)body;
+
 @end

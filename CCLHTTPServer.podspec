@@ -7,10 +7,17 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'BSD', :file => 'LICENSE' }
   spec.authors = { 'Kyle Fuller' => 'inbox@kylefuller.co.uk' }
   spec.social_media_url = 'https://twitter.com/kylefuller'
-  spec.platform = :osx, '10.7'
-  spec.platform = :ios, '5.0'
-  spec.source_files = 'CCLHTTPServer/*.{h,m}'
-  spec.dependency 'CocoaAsyncSocket'
+  spec.osx.deployment_target = '10.7'
+  spec.ios.deployment_target = '5.0'
   spec.requires_arc = true
+
+  spec.subspec 'Server' do |server_spec|
+    server_spec.source_files = 'CCLHTTPServer/CCLHTTPServer{,Response}.{h,m}'
+    server_spec.dependency 'CocoaAsyncSocket'
+  end
+
+  spec.subspec 'View' do |view_spec|
+    view_spec.source_files = 'CCLHTTPServer/CCLHTTPView.{h,m}'
+  end
 end
 
