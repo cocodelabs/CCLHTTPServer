@@ -20,7 +20,25 @@
         headers = mutableHeaders;
     }
 
-    return [self responseWithStatusCode:statusCode headers:headers body:body];;
+    return [self responseWithStatusCode:statusCode headers:headers body:body];
+}
+
++ (instancetype)propertyListResponseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers plist:(id)plist {
+    NSString *error;
+    NSData *body = [NSPropertyListSerialization dataFromPropertyList:plist format:NSPropertyListXMLFormat_v1_0 errorDescription:&error];
+
+    if (headers == nil) {
+        headers = @{
+            @"Content-Type": @"application/x-plist; charset=utf8",
+        };
+    } else if ([headers objectForKey:@"Content-Type"] == nil) {
+        NSMutableDictionary *mutableHeaders = [headers mutableCopy];
+        mutableHeaders[@"Content-Type"] = @"application/x-plist; charset=utf8";
+        headers = mutableHeaders;
+    }
+
+
+    return [self responseWithStatusCode:statusCode headers:headers body:body];
 }
 
 - (instancetype)initWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers body:(NSData *)body {

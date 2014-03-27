@@ -69,4 +69,45 @@
     expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
 }
 
+
+- (void)testEncodesPropertyListResponse {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse propertyListResponseWithStatusCode:200 headers:nil plist:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    id plist = [NSPropertyListSerialization propertyListWithData:body options:NSPropertyListImmutable format:NULL error:nil];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/x-plist; charset=utf8");
+    expect(body).notTo.beNil();
+    expect(plist).to.equal(@{@"key": @"value"});
+}
+
+- (void)testEncodesPropertyListResponseDoesntOverideHeaders {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse propertyListResponseWithStatusCode:200 headers:@{@"Test": @"Value"} plist:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    id plist = [NSPropertyListSerialization propertyListWithData:body options:NSPropertyListImmutable format:NULL error:nil];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"application/x-plist; charset=utf8");
+    expect([[response headers] objectForKey:@"Test"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(plist).to.equal(@{@"key": @"value"});
+}
+
+- (void)testEncodesPropertyListResponseDoesntOverideContentTypeHeader {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse propertyListResponseWithStatusCode:200 headers:@{@"Content-Type": @"Value"} plist:@{@"key": @"value"}];
+
+    NSData *body = [response body];
+    id plist = [NSPropertyListSerialization propertyListWithData:body options:NSPropertyListImmutable format:NULL error:nil];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"Value");
+    expect(body).notTo.beNil();
+    expect(plist).to.equal(@{@"key": @"value"});
+}
+
 @end
