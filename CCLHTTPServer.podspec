@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'CCLHTTPServer'
-  spec.version = '0.1.0'
+  spec.version = '0.9.0'
   spec.summary = 'Simple asyncronous HTTP server'
   spec.homepage = 'https://github.com/cocodelabs/CCLHTTPServer'
   spec.source = { :git => 'https://github.com/cocodelabs/CCLHTTPServer.git', :tag => "#{spec.version}" }
