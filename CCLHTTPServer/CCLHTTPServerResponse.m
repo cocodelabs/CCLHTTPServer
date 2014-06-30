@@ -40,6 +40,23 @@ static NSString * CCLHTTPPercentEscapedQueryString(NSString *string) {
     return [self responseWithStatusCode:statusCode headers:headers body:body];
 }
 
++ (instancetype)responseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers content:(NSString *)content contentType:(NSString *)contentType {
+    NSString *contentTypeHeader = [NSString stringWithFormat:@"%@; charset=utf8", contentType];
+
+    if (headers == nil) {
+        headers = @{
+            @"Content-Type": contentTypeHeader,
+        };
+    } else if ([headers objectForKey:@"Content-Type"] == nil) {
+        NSMutableDictionary *mutableHeaders = [headers mutableCopy];
+        mutableHeaders[@"Content-Type"] = contentTypeHeader;
+        headers = mutableHeaders;
+    }
+
+    NSData *body = [content dataUsingEncoding:NSUTF8StringEncoding];
+    return [self responseWithStatusCode:statusCode headers:headers body:body];
+}
+
 + (instancetype)JSONResponseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers parameters:(id)parameters {
     NSError *error;
     NSData *body = [NSJSONSerialization dataWithJSONObject:parameters options:0 error:&error];

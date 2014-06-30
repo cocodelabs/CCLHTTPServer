@@ -29,6 +29,36 @@
     expect(response.statusCode).to.equal(201);
 }
 
+#pragma mark - Content
+
+- (void)testEncodesTextResponse {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse responseWithStatusCode:200 headers:nil content:@"Hello World 👌!" contentType:@"text/plain"];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([[response headers] objectForKey:@"Content-Type"]).to.equal(@"text/plain; charset=utf8");
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"Hello World 👌!");
+}
+
+- (void)testEncodesTextResponseWithExistingHeaders {
+    CCLHTTPServerResponse *response = [CCLHTTPServerResponse responseWithStatusCode:200 headers:@{@"Foo": @"Bar"} content:@"Hello World 👌!" contentType:@"text/plain"];
+
+    NSData *body = [response body];
+    NSString *decodedBody = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
+
+    expect([response statusCode]).to.equal(200);
+    expect([response headers]).notTo.beNil();
+    expect([response headers]).to.equal(@{@"Content-Type": @"text/plain; charset=utf8", @"Foo": @"Bar"});
+    expect(body).notTo.beNil();
+    expect(decodedBody).to.equal(@"Hello World 👌!");
+}
+
+#pragma mark - JSON
+
 - (void)testEncodesJSONResponse {
     CCLHTTPServerResponse *response = [CCLHTTPServerResponse JSONResponseWithStatusCode:200 headers:nil parameters:@{@"key": @"value"}];
 
@@ -68,6 +98,8 @@
     expect(body).notTo.beNil();
     expect(decodedBody).to.equal(@"{\"key\":\"value\"}");
 }
+
+#pragma mark - Property List
 
 - (void)testEncodesPropertyListResponse {
     CCLHTTPServerResponse *response = [CCLHTTPServerResponse propertyListResponseWithStatusCode:200 headers:nil plist:@{@"key": @"value"}];

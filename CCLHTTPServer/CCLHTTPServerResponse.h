@@ -46,6 +46,15 @@
 */
 + (instancetype)responseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers body:(NSData *)body;
 
+/*** A convinience method for generating responses from a string.
+ @param statusCode The status code for the response.
+ @param headers The HTTP headers for the response.
+ @param content The content to be unicode encoded.
+ @param contentType The mime type for the content, for example plain/html.
+ @return The  response.
+ */
++ (instancetype)responseWithStatusCode:(NSUInteger)statusCode headers:(NSDictionary *)headers content:(NSString *)content contentType:(NSString *)contentType;
+
 /*** A convinience method for generating a form URL encoded response.
  @param statusCode The status code for the response.
  @param headers The HTTP headers for the response.
