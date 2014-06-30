@@ -1,24 +1,5 @@
 #import <Foundation/Foundation.h>
-
-/// A protocol for a HTTP response object
-@protocol CCLHTTPServerResponse <NSObject>
-
-/*** The HTTP status code for the response.
- @return The HTTP status code for the response, as an unsigned integer.
-*/
-- (NSUInteger)statusCode;
-
-/***
- @return All the HTTP headers for the response as a dictionary.
-*/
-- (NSDictionary *)headers;
-
-/*** The HTTP body for the response, as NSData.
- @return The HTTP body for the response as data.
-*/
-- (NSData *)body;
-
-@end
+#import "CCLHTTPServerInterface.h"
 
 /// A response conforming to the CCLHTTPServerResponse protcol
 @interface CCLHTTPServerResponse : NSObject <CCLHTTPServerResponse>

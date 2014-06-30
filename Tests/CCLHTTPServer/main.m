@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CCLHTTPServer/CCLHTTPServer.h>
+#import <CCLHTTPServer/CCLHTTPServerResponse.h>
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {

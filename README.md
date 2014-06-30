@@ -28,6 +28,12 @@ protocol. You must return an object which conforms to the
 called `CCLHTTPServerResponse` which has various convinience methods for
 creating responses of different types.
 
+CCLHTTPServer was designed to expose a standard interface for creating a HTTP
+server in Objective-C though the `CCLHTTPServer/Interface` pod. This means that
+other HTTP servers are able to follow the same interface and allows developers
+to write frameworks around this standard interface without being tied down to a
+single server implementation.
+
 ### Requests
 
 A request is an object conforming to the `CCLHTTPServerRequest` protocol which

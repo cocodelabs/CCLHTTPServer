@@ -11,6 +11,7 @@
 #import <Expecta/Expecta.h>
 
 #import <CCLHTTPServer/CCLHTTPServer.h>
+#import <CCLHTTPServer/CCLHTTPServerResponse.h>
 
 
 @interface CCLHTTPServerResponseTests : XCTestCase

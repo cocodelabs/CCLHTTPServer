@@ -1,5 +1,6 @@
 #import <CocoaAsyncSocket/GCDAsyncSocket.h>
 #import "CCLHTTPServer.h"
+#import "CCLHTTPServerResponse.h"
 
 @interface CCLHTTPServerRequest : NSObject <CCLHTTPServerRequest>
 

@@ -11,13 +11,26 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '5.0'
   spec.requires_arc = true
 
+  spec.subspec 'Interface' do |interface_spec|
+    interface_spec.source_files = 'CCLHTTPServer/CCLHTTPServerInterface.{h,m}'
+  end
+
+  spec.subspec 'Response' do |response_spec|
+    response_spec.source_files = 'CCLHTTPServer/CCLHTTPServerResponse.{h,m}'
+    response_spec.dependency 'CCLHTTPServer/Interface'
+  end
+
   spec.subspec 'Server' do |server_spec|
-    server_spec.source_files = 'CCLHTTPServer/CCLHTTPServer{,Response}.{h,m}'
+    server_spec.source_files = 'CCLHTTPServer/CCLHTTPServer.{h,m}'
     server_spec.dependency 'CocoaAsyncSocket'
+    server_spec.dependency 'CCLHTTPServer/Interface'
+    server_spec.dependency 'CCLHTTPServer/Response'
   end
 
   spec.subspec 'View' do |view_spec|
     view_spec.source_files = 'CCLHTTPServer/CCLHTTPView.{h,m}'
+    view_spec.dependency 'CCLHTTPServer/Interface'
+    view_spec.dependency 'CCLHTTPServer/Response'
   end
 end
 
