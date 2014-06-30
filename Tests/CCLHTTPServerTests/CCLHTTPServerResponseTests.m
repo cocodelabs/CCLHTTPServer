@@ -1,5 +1,5 @@
 //
-//  CCLHTTPServerTests.m
+//  CCLHTTPServerResponseTests.m
 //  CCLHTTPServerTests
 //
 //  Created by Kyle Fuller on 23/03/2014.
