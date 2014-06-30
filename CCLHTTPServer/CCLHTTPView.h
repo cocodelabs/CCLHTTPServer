@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "CCLHTTPServer.h"
+#import "CCLHTTPServerInterface.h"
 
 /** A view is a way to create an object for dealing with HTTP requests. The
  view class allows you to organise your code related to specific HTTP methods
