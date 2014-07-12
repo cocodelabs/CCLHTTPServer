@@ -1,7 +1,7 @@
 CCLHTTPServer
 =============
 
-[![Build Status](https://travis-ci.org/cocodelabs/CCLHTTPServer.png?branch=master)](https://travis-ci.org/cocodelabs/CCLHTTPServer)
+[![Build Status](http://img.shields.io/travis/cocodelabs/CCLHTTPServer.svg?style=flat)](https://travis-ci.org/cocodelabs/CCLHTTPServer)
 
 CCLHTTPServer is a simple HTTP library server for iOS and OS X.
 
